@@ -1,0 +1,31 @@
+{
+  "name": "convertis",
+  "version": "0.0.1",
+  "description": "Convertis is a nodeJS module that lets you convert anything.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmcarlsson/convertis.git"
+  },
+  "keywords": [
+    "convertis",
+    "convert",
+    "celsius",
+    "fahrenheit",
+    "economy",
+    "taxes",
+    "string",
+    "numbers",
+    "data",
+    "modify"
+  ],
+  "author": "Mikael Carlsson <mikael.m.carlsson@gmail.com> (http://webumin.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmcarlsson/convertis/issues"
+  },
+  "homepage": "https://github.com/mmcarlsson/convertis#readme"
+}
