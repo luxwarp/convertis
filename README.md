@@ -16,6 +16,9 @@ Here you will get some cool functions like:
 ```javascript
 var Convertis = require("convertis");   //Import the module.
 var convis = new Convertis();            //Create an instance of Convertis
+
+console.log(c.celsiusToFahrenheit(13.4));   //Convert celsius to fahrenheit
+console.log(c.fahrenheitToCelsius(1));      //Convert fahrenheit to celsius.
 ```
 
 ## Testing
