@@ -17,8 +17,9 @@ Here you will get some cool functions like:
 var Convertis = require("convertis");   //Import the module.
 var convis = new Convertis();            //Create an instance of Convertis
 
-console.log(c.celsiusToFahrenheit(13.4));   //Convert celsius to fahrenheit
-console.log(c.fahrenheitToCelsius(1));      //Convert fahrenheit to celsius.
+console.log(c.degree(10,"K","c"));  //returns 10 kelvin in celsius: -263.15
+console.log(c.degree(1,"C","K"));   //returns 1 celsius in kelvin: 274.15
+console.log(c.degree(10,"F","c"));  //returns 10 fahrenheit in celsius -39.6
 ```
 
 ## Testing
