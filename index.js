@@ -26,7 +26,7 @@ class Convertis {
                 }else if(to == "c") {
                     result = value;
                 }else{
-                    return "Cannot convert to: "+ to +". Use only C,F, or K.";
+                    return "Cannot convert to: "+ to +". Use only C, F, or K.";
                 }
                 break;
             case "f":
@@ -37,7 +37,7 @@ class Convertis {
                 }else if(to == "f") {
                     result = value;
                 }else{
-                    return "Cannot convert to: "+ to +". Use only C,F, or K.";
+                    return "Cannot convert to: "+ to +". Use only C, F, or K.";
                 }
                 break;
             case "k":
@@ -48,11 +48,11 @@ class Convertis {
                 }else if(to == "k") {
                     result = value;
                 }else{
-                    return "Cannot convert to: "+ to +". Use only C,F, or K.";
+                    return "Cannot convert to: "+ to +". Use only C, F, or K.";
                 }
                 break;
             default: 
-                result = "Cannot convert from: "+ from +". Use only C,F, or K.";
+                result = "Cannot convert from: "+ from +". Use only C, F, or K.";
                 break;
         }
         return result;

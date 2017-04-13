@@ -13,7 +13,7 @@ Here you will get some cool functions like:
 
 ```javascript
 var Convertis = require("convertis");   //Import the module.
-var convis = new Convertis();            //Create an instance of Convertis
+var c = new Convertis();            //Create an instance of Convertis
 
 console.log(c.degree(10,"K","c"));  //returns 10 kelvin in celsius: -263.15
 console.log(c.degree(1,"C","K"));   //returns 1 celsius in kelvin: 274.15
