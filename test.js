@@ -13,3 +13,8 @@ console.log(c.weight(10000,"g","kilograms")); //returns 10000 grams in kilograms
 console.log(c.weight(10000,"grams","oz")); //returns 10000 grams in ounces: 352.7396195
 console.log(c.weight(10000,"tons","g")); //returns 10000 tons in grams: 10000000000
 console.log(c.weight(10000,"pounds","kg")); //returns 10000 pounds in kilograms: 4535.9237
+
+//measurements example
+console.log(c.measurement(100, "millimeters", "cm")); //return 100 millimeters in centimeters: 10
+console.log(c.measurement(100, "m", "miles")); //return 100 meters in miles: 0.0621371192
+console.log(c.measurement(100, "inches", "ft")); //return 100 inches in feets: 8.33333333
