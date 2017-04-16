@@ -354,6 +354,241 @@ class Convertis {
         }
         return result;
     }
+
+    /**
+     * Convert different types of datatypes, like Bytes, Kilobytes, Megabytes, Terabytes, Petabytes, Exabytes, Zetabytes, Yottabytes
+     * @param {number} value The value you want to convert.
+     * @param {string} from From what type of measurement, eg. B = Bytes, Kb = Kilobytes, Mb = Megabytes, Tb = Terabytes, PB = Petabytes, EB = Exabytes, ZB = Zetabytes, YB = Yottabytes 
+     * @param {string} to To what type of measurement, eg. B = Bytes, Kb = Kilobytes, Mb = Megabytes, Tb = Terabytes, PB = Petabytes, EB = Exabytes, ZB = Zetabytes, YB = Yottabytes
+     */
+    dataSize(value, from, to) {
+        var result;
+        to = to.toLowerCase();
+        from = from.toLowerCase();
+
+        switch(from) {
+            case "b":
+            case "bytes":
+                if(to == "b" || to == "bytes") {
+                    result = value;
+                }else if(to == "kb" || to == "kilobytes") {
+                    result = value / 1024;
+                }else if(to == "mb" || to == "megabytes") {
+                    result = value / 1024 / 1024; 
+                }else if(to == "gb" || to == "gigabytes") {
+                    result = value / 1024 / 1024 / 1024;
+                }else if(to == "tb" || to == "terabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "pb" || to == "petabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "eb" || to == "exabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "zb" || to == "zetabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "yb" || to == "yottabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024 / 1024 / 1024 / 1024;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "kb":
+            case "kilobytes":
+                if(to == "b" || to == "bytes") {
+                    result = value * 1024;
+                }else if(to == "kb" || to == "kilobytes") {
+                    result = value;
+                }else if(to == "mb" || to == "megabytes") {
+                    result = value / 1024; 
+                }else if(to == "gb" || to == "gigabytes") {
+                    result = value / 1024 / 1024;
+                }else if(to == "tb" || to == "terabytes") {
+                    result = value / 1024 / 1024 / 1024;
+                }else if(to == "pb" || to == "petabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "eb" || to == "exabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "zb" || to == "zetabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "yb" || to == "yottabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024 / 1024 / 1024;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "mb":
+            case "megabytes":
+                if(to == "b" || to == "bytes") {
+                    result = value * 1024 * 1024;
+                }else if(to == "kb" || to == "kilobytes") {
+                    result = value * 1024;
+                }else if(to == "mb" || to == "megabytes") {
+                    result = value;
+                }else if(to == "gb" || to == "gigabytes") {
+                    result = value / 1024;
+                }else if(to == "tb" || to == "terabytes") {
+                    result = value / 1024 / 1024;
+                }else if(to == "pb" || to == "petabytes") {
+                    result = value / 1024 / 1024 / 1024;
+                }else if(to == "eb" || to == "exabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "zb" || to == "zetabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "yb" || to == "yottabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024 / 1024;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "gb":
+            case "gigabytes":
+                if(to == "b" || to == "bytes") {
+                    result = value * 1024 * 1024 * 1024;
+                }else if(to == "kb" || to == "kilobytes") {
+                    result = value * 1024 * 1024;
+                }else if(to == "mb" || to == "megabytes") {
+                    result = value * 1024;
+                }else if(to == "gb" || to == "gigabytes") {
+                    result = value;
+                }else if(to == "tb" || to == "terabytes") {
+                    result = value / 1024;
+                }else if(to == "pb" || to == "petabytes") {
+                    result = value / 1024 / 1024;
+                }else if(to == "eb" || to == "exabytes") {
+                    result = value / 1024 / 1024 / 1024;
+                }else if(to == "zb" || to == "zetabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024;
+                }else if(to == "yb" || to == "yottabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024 / 1024;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "tb":
+            case "terabytes":
+                if(to == "b" || to == "bytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "kb" || to == "kilobytes") {
+                    result = value * 1024 * 1024 * 1024;
+                }else if(to == "mb" || to == "megabytes") {
+                    result = value * 1024 * 1024;
+                }else if(to == "gb" || to == "gigabytes") {
+                    result = value * 1024;
+                }else if(to == "tb" || to == "terabytes") {
+                    result = value;
+                }else if(to == "pb" || to == "petabytes") {
+                    result = value / 1024;
+                }else if(to == "eb" || to == "exabytes") {
+                    result = value / 1024 / 1024;
+                }else if(to == "zb" || to == "zetabytes") {
+                    result = value / 1024 / 1024 / 1024;
+                }else if(to == "yb" || to == "yottabytes") {
+                    result = value / 1024 / 1024 / 1024 / 1024;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "pb":
+            case "petabytes":
+                if(to == "b" || to == "bytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "kb" || to == "kilobytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "mb" || to == "megabytes") {
+                    result = value * 1024 * 1024 * 1024;
+                }else if(to == "gb" || to == "gigabytes") {
+                    result = value * 1024 * 1024;
+                }else if(to == "tb" || to == "terabytes") {
+                    result = value * 1024;
+                }else if(to == "pb" || to == "petabytes") {
+                    result = value;
+                }else if(to == "eb" || to == "exabytes") {
+                    result = value / 1024;
+                }else if(to == "zb" || to == "zetabytes") {
+                    result = value / 1024 / 1024;
+                }else if(to == "yb" || to == "yottabytes") {
+                    result = value / 1024 / 1024 / 1024;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "eb":
+            case "exabytes":
+                if(to == "b" || to == "bytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "kb" || to == "kilobytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "mb" || to == "megabytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "gb" || to == "gigabytes") {
+                    result = value * 1024 * 1024 * 1024;
+                }else if(to == "tb" || to == "terabytes") {
+                    result = value * 1024 * 1024;
+                }else if(to == "pb" || to == "petabytes") {
+                    result = value * 1024;
+                }else if(to == "eb" || to == "exabytes") {
+                    result = value;
+                }else if(to == "zb" || to == "zetabytes") {
+                    result = value / 1024;
+                }else if(to == "yb" || to == "yottabytes") {
+                    result = value / 1024 / 1024;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "zb":
+            case "zetabytes":
+                if(to == "b" || to == "bytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "kb" || to == "kilobytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "mb" || to == "megabytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "gb" || to == "gigabytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "tb" || to == "terabytes") {
+                    result = value * 1024 * 1024 * 1024;
+                }else if(to == "pb" || to == "petabytes") {
+                    result = value * 1024 * 1024;
+                }else if(to == "eb" || to == "exabytes") {
+                    result = value * 1024;
+                }else if(to == "zb" || to == "zetabytes") {
+                    result = value;
+                }else if(to == "yb" || to == "yottabytes") {
+                    result = value / 1024;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "yb":
+            case "yottabytes":
+                if(to == "b" || to == "bytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "kb" || to == "kilobytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "mb" || to == "megabytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "gb" || to == "gigabytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "tb" || to == "terabytes") {
+                    result = value * 1024 * 1024 * 1024 * 1024;
+                }else if(to == "pb" || to == "petabytes") {
+                    result = value * 1024 * 1024 * 1024;
+                }else if(to == "eb" || to == "exabytes") {
+                    result = value * 1024 * 1024;
+                }else if(to == "zb" || to == "zetabytes") {
+                    result = value * 1024;
+                }else if(to == "yb" || to == "yottabytes") {
+                    result = value;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            default: 
+                result = "Cannot convert from: "+ from +".";
+                break;
+        }
+        return result;
+    }
     
 }
 

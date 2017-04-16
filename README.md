@@ -4,10 +4,13 @@
 Convertis is a nodeJS module that lets you convert anything. Never write your own convert functions again!
 Here you will get some cool convert functions like:
 
-* Temperature
-* Weight 
+* Temperature (Celsius, Fahrenheit, Kelvin)
+* Weight (Grams, Kilograms, Tons, Pounds, Ounces)
+* Measurements (Millimeters, Centimeters, Meters, Kilometers, Inches, Feets, Yards, Miles)
+* DataSizes (Bytes, Kilobytes, Megabytes, Terabytes, Petabytes, Exabytes, Zetabytes, Yottabytes)
 
 More information in our wiki on github.
+See our [change log](https://github.com/mmcarlsson/convertis/wiki/Change-log)
 
 ## Install
 `npm install convertis`
@@ -33,6 +36,12 @@ console.log(c.weight(10000,"pounds","kg"));     //returns 10000 pounds in kilogr
 console.log(c.measurement(100, "millimeters", "cm"));   //return 100 millimeters in centimeters: 10
 console.log(c.measurement(100, "m", "miles"));          //return 100 meters in miles: 0.0621371192
 console.log(c.measurement(100, "inches", "ft"));        //return 100 inches in feets: 8.33333333
+
+//dataSizes example
+console.log(c.dataSize(1, "b", "kb")); //returns 1 bytes in kilobytes: 0.0009765625
+console.log(c.dataSize(1, "kilobytes", "b")); //returns 1 kilobytes in bytes: 1024
+console.log(c.dataSize(1, "gb", "megabytes")); //returns 1 gigabytes in megabytes: 1024
+console.log(c.dataSize(1, "yottabytes", "tb")); //returns 1 yottabytes in terabytes: 1099511627776
 ```
 
 ## Testing
