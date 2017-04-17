@@ -358,8 +358,8 @@ class Convertis {
     /**
      * Convert different types of datatypes, like Bytes, Kilobytes, Megabytes, Terabytes, Petabytes, Exabytes, Zetabytes, Yottabytes
      * @param {number} value The value you want to convert.
-     * @param {string} from From what type of measurement, eg. B = Bytes, Kb = Kilobytes, Mb = Megabytes, Tb = Terabytes, PB = Petabytes, EB = Exabytes, ZB = Zetabytes, YB = Yottabytes 
-     * @param {string} to To what type of measurement, eg. B = Bytes, Kb = Kilobytes, Mb = Megabytes, Tb = Terabytes, PB = Petabytes, EB = Exabytes, ZB = Zetabytes, YB = Yottabytes
+     * @param {string} from From what type of data size, eg. B = Bytes, Kb = Kilobytes, Mb = Megabytes, Tb = Terabytes, PB = Petabytes, EB = Exabytes, ZB = Zetabytes, YB = Yottabytes 
+     * @param {string} to To what type of data size, eg. B = Bytes, Kb = Kilobytes, Mb = Megabytes, Tb = Terabytes, PB = Petabytes, EB = Exabytes, ZB = Zetabytes, YB = Yottabytes
      */
     dataSize(value, from, to) {
         var result;
@@ -590,6 +590,80 @@ class Convertis {
         return result;
     }
     
+     /**
+     * Convert different types of times, like Milliseconds, Seconds, Minutes, Hours
+     * @param {number} value The value you want to convert.
+     * @param {string} from From what type of time, eg. MS = Milliseconds, S = Seconds, M = Minuts, H = Hours
+     * @param {string} to To what type of time, eg. MS = Milliseconds, S = Seconds, M = Minuts, H = Hours
+     */
+    time(value, from, to) {
+        var result;
+        to = to.toLowerCase();
+        from = from.toLowerCase();
+
+        switch(from) {
+            case "ms":
+            case "milliseconds":
+                if(to == "ms" || to == "milliseconds") {
+                    result = value;
+                }else if(to == "s" || to == "seconds") {
+                    result = value / 1000;
+                }else if(to == "m" || to == "minutes") {
+                    result = value / 1000 / 60; 
+                }else if(to == "h" || to == "hours") {
+                    result = value / 1000 / 60 / 60;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "s":
+            case "seconds":
+                if(to == "ms" || to == "milliseconds") {
+                    result = value * 1000;
+                }else if(to == "s" || to == "seconds") {
+                    result = value;
+                }else if(to == "m" || to == "minutes") {
+                    result = value / 60; 
+                }else if(to == "h" || to == "hours") {
+                    result = value / 60 / 60;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "m":
+            case "minutes":
+                if(to == "ms" || to == "milliseconds") {
+                    result = value * 60 * 1000;
+                }else if(to == "s" || to == "seconds") {
+                    result = value * 60;
+                }else if(to == "m" || to == "minutes") {
+                    result = value; 
+                }else if(to == "h" || to == "hours") {
+                    result = value / 60;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "h":
+            case "hours":
+                if(to == "ms" || to == "milliseconds") {
+                    result = value * 60 * 60 * 1000;
+                }else if(to == "s" || to == "seconds") {
+                    result = value * 60 * 1000;
+                }else if(to == "m" || to == "minutes") {
+                    result = value * 60; 
+                }else if(to == "h" || to == "hours") {
+                    result = value;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            default: 
+                result = "Cannot convert from: "+ from +".";
+                break;
+        }
+        return result;
+    }
 }
 
 module.exports = Convertis;

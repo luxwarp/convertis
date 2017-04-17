@@ -24,3 +24,7 @@ console.log(c.dataSize(1, "b", "kb")); //returns 1 bytes in kilobytes: 0.0009765
 console.log(c.dataSize(1, "kilobytes", "b")); //returns 1 kilobytes in bytes: 1024
 console.log(c.dataSize(1, "gb", "megabytes")); //returns 1 gigabytes in megabytes: 1024
 console.log(c.dataSize(1, "yottabytes", "tb")); //returns 1 yottabytes in terabytes: 1099511627776
+
+console.log(c.time(3, "h", "minutes")); //returns 3 hours in minutes: 180
+console.log(c.time(3, "m", "ms")); //returns 3 minutes in milliseconds: 180000
+console.log(c.time(3, "milliseconds", "seconds")); //returns 3 milliseconds in seconds: 0.003
