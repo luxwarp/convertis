@@ -1,16 +1,17 @@
 # Convertis
 
 ## Intro
-Convertis is a nodeJS module that lets you convert anything. Never write your own convert functions again!
-Here you will get some cool convert functions like:
+Convertis is a nodeJS module that lets you convert 'anything'. Never write your own convert functions again!
+Here you will get some convert functions like:
 
 * Temperature (Celsius, Fahrenheit, Kelvin)
 * Weight (Grams, Kilograms, Tons, Pounds, Ounces)
 * Measurement (Millimeters, Centimeters, Meters, Kilometers, Inches, Feets, Yards, Miles)
 * DataSize (Bytes, Kilobytes, Megabytes, Terabytes, Petabytes, Exabytes, Zetabytes, Yottabytes)
 * Time (Milliseconds, Seconds, Minutes, Hours)
+* Volume (Millilitre, Centilitre, Decilitre, Litre)
 
-More information in our wiki on github.
+More information in our [wiki](https://github.com/mmcarlsson/convertis/wiki) on github.
 
 See our [change log](https://github.com/mmcarlsson/convertis/wiki/Change-log)
 
@@ -49,6 +50,11 @@ console.log(c.dataSize(1, "yottabytes", "tb"));         //returns 1 yottabytes i
 console.log(c.time(3, "h", "minutes"));                 //returns 3 hours in minutes: 180
 console.log(c.time(3, "m", "ms"));                      //returns 3 minutes in milliseconds: 180000
 console.log(c.time(3, "milliseconds", "seconds"));      //returns 3 milliseconds in seconds: 0.003
+
+//Volume example
+console.log(c.volume(10, "cl", "ml"));                  //returns 10 Centilitre in Millilitre: 100
+console.log(c.volume(10, "Litre", "cl"));               //returns 10 Litre in Centilitre: 1000
+console.log(c.volume(10, "decilitre", "litre"));        //returns 10 Decilitre in Litre: 1
 ```
 
 ## Testing

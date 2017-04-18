@@ -28,3 +28,7 @@ console.log(c.dataSize(1, "yottabytes", "tb")); //returns 1 yottabytes in teraby
 console.log(c.time(3, "h", "minutes")); //returns 3 hours in minutes: 180
 console.log(c.time(3, "m", "ms")); //returns 3 minutes in milliseconds: 180000
 console.log(c.time(3, "milliseconds", "seconds")); //returns 3 milliseconds in seconds: 0.003
+
+console.log(c.volume(10, "cl", "ml")); //returns 10 Centilitre in Millilitre: 100
+console.log(c.volume(10, "Litre", "cl")); //returns 10 Litre in Centilitre: 1000
+console.log(c.volume(10, "decilitre", "litre")); //returns 10 Decilitre in Litre: 1

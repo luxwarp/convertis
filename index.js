@@ -664,6 +664,81 @@ class Convertis {
         }
         return result;
     }
+
+    /**
+     * Convert different types of volume, like Millilitre, Centilitre, Decilitre, Litre.
+     * @param {number} value The value you want to convert.
+     * @param {string} from From what type of volume, eg. Ml = Millilitre, Cl = Centilitre, Dl = Decilitre, L = Litre.
+     * @param {string} to To what type of volume, eg. Ml = Millilitre, Cl = Centilitre, Dl = Decilitre, L = Litre.
+     */
+    volume(value, from, to) {
+        var result;
+        to = to.toLowerCase();
+        from = from.toLowerCase();
+
+        switch(from) {
+            case "ml":
+            case "millilitre":
+                if(to == "ml" || to == "millilitre") {
+                    result = value;
+                }else if(to == "cl" || to == "centilitre") {
+                    result = value / 10;
+                }else if(to == "dl" || to == "decilitre") {
+                    result = value / 100;
+                }else if(to == "l" || to == "litre") {
+                    result = value / 1000;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "cl":
+            case "centilitre":
+                if(to == "ml" || to == "millilitre") {
+                    result = value * 10;
+                }else if(to == "cl" || to == "centilitre") {
+                    result = value;
+                }else if(to == "dl" || to == "decilitre") {
+                    result = value / 10;
+                }else if(to == "l" || to == "litre") {
+                    result = value / 100;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "dl":
+            case "decilitre":
+                if(to == "ml" || to == "millilitre") {
+                    result = value * 100;
+                }else if(to == "cl" || to == "centilitre") {
+                    result = value * 10;
+                }else if(to == "dl" || to == "decilitre") {
+                    result = value;
+                }else if(to == "l" || to == "litre") {
+                    result = value / 10;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            case "l":
+            case "litre":
+                if(to == "ml" || to == "millilitre") {
+                    result = value * 1000;
+                }else if(to == "cl" || to == "centilitre") {
+                    result = value * 100;
+                }else if(to == "dl" || to == "decilitre") {
+                    result = value * 10;
+                }else if(to == "l" || to == "litre") {
+                    result = value;
+                } else{
+                    return "Cannot convert to: "+ to +".";
+                }
+                break;
+            default: 
+                result = "Cannot convert from: "+ from +".";
+                break;
+        }
+        return result;
+    }
 }
 
 module.exports = Convertis;

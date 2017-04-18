@@ -1,6 +1,6 @@
 {
   "name": "convertis",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Convertis is a nodeJS module that lets you convert 'anything'.",
   "main": "index.js",
   "scripts": {
