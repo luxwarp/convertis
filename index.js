@@ -33,7 +33,7 @@ class Convertis {
             case "f":
             case "fahrenheit":
                 if(to == "c" || to == "celsius") {
-                    result = (value - 32) * 9/5;
+                    result = (value - 32) * 5/9;
                 }else if(to == "k" || to == "kelvin") {
                     result = (value + 459.67) *  5/9;
                 }else if(to == "f" || to == "fahrenheit") {
