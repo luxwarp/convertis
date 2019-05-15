@@ -29,7 +29,7 @@ var c = new Convertis();                                //Create an instance of 
 //temperature examples
 console.log(c.degree(10,"Kelvin","c"));                 //returns 10 kelvin in celsius: -263.15
 console.log(c.degree(1,"C","K"));                       //returns 1 celsius in kelvin: 274.15
-console.log(c.degree(10,"fahrenheit","c"));             //returns 10 fahrenheit in celsius -39.6
+console.log(c.degree(10,"fahrenheit","c"));             //returns 10 fahrenheit in celsius -12.222222222222221
 
 //weight example
 console.log(c.weight(10000,"g","kilograms"));           //returns 10000 grams in kilograms: 10
