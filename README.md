@@ -15,7 +15,7 @@ Here you will get some convert functions like:
 
 More information in the [wiki](https://github.com/mmcarlsson/convertis/wiki) on github.
 
-See the [change log](https://github.com/mmcarlsson/convertis/wiki/Change-log) for upate news.
+See the [change log](https://github.com/mmcarlsson/convertis/wiki/Change-log) for update news.
 
 ## Install
 `npm install convertis`
