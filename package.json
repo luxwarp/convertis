@@ -1,14 +1,14 @@
 {
   "name": "convertis",
-  "version": "0.1.2",
-  "description": "Convertis is a nodeJS module that lets you convert 'anything'.",
+  "version": "0.2.1",
+  "description": "Convertis is a NodeJS module that lets you convert 'anything'.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mmcarlsson/convertis.git"
+    "url": "git+https://github.com/luxwarp/convertis.git"
   },
   "keywords": [
     "convertis",
@@ -20,12 +20,13 @@
     "string",
     "numbers",
     "data",
-    "modify"
+    "modify",
+    "volume"
   ],
-  "author": "Mikael Carlsson <mikael.m.carlsson@gmail.com> (http://webumin.com)",
-  "license": "MIT",
+  "author": "Mikael Luxwarp Carlsson <mikael.m.carlsson@gmail.com> (https://luxwarp.info)",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mmcarlsson/convertis/issues"
+    "url": "https://github.com/luxwarp/convertis/issues"
   },
-  "homepage": "https://github.com/mmcarlsson/convertis#readme"
+  "homepage": "https://github.com/luxwarp/convertis#readme"
 }

@@ -1,7 +1,9 @@
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 # Convertis
 
 ## Intro
-Convertis is a nodeJS module that lets you convert 'anything'. Never write your own convert functions again!
+Convertis is a NodeJS module that let's you convert 'anything'. Never write your own convert functions again!
 Here you will get some convert functions like:
 
 * Temperature (Celsius, Fahrenheit, Kelvin)
@@ -11,9 +13,9 @@ Here you will get some convert functions like:
 * Time (Milliseconds, Seconds, Minutes, Hours)
 * Volume (Millilitre, Centilitre, Decilitre, Litre)
 
-More information in our [wiki](https://github.com/mmcarlsson/convertis/wiki) on github.
+More information in the [wiki](https://github.com/mmcarlsson/convertis/wiki) on github.
 
-See our [change log](https://github.com/mmcarlsson/convertis/wiki/Change-log)
+See the [change log](https://github.com/mmcarlsson/convertis/wiki/Change-log) for upate news.
 
 ## Install
 `npm install convertis`
@@ -59,13 +61,12 @@ console.log(c.volume(10, "decilitre", "litre"));        //returns 10 Decilitre i
 
 ## Testing
 If you want to try some functions before using this module 
-in your applications you can use the `test.js` file located in the
+in your application you can use the `test.js` file located in the
 root folder of the module and then run the file in your terminal with the command
-`node ./test.js`
+`node ./test.js` or run `npm test` from the module folder.
 
 ## License
-MIT - © Copyright [Mikael Carlsson](http://mikaelcarlsson.info)
+ISC - © Copyright [Mikael Luxwarp Carlsson](https://luxwarp.info)
 
 ## Note/Contribute
 Feel free to contribute the way you want.
-
